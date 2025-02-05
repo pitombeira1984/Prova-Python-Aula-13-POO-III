@@ -9,9 +9,8 @@ while True:
     opcao = int(input("Digite a opção desejada: "))
 
     if opcao == 1:
-        nome = input("Digite o nome do titular: ")
-        saldo_inicial = float(input("Digite o saldo inicial: "))
-        conta = ContaBancaria(nome, saldo_inicial)
+        conta = ContaBancaria("", 0)
+        conta.cadastrar("", 0)
         print("Conta criada com sucesso!")
     elif opcao == 2:
         valor = float(input("Digite o valor a ser depositado: "))
