@@ -1,4 +1,5 @@
 
+
 class ContaBancaria():
     def __init__(self, titular, saldo):
         self.titular = titular
@@ -15,11 +16,15 @@ class ContaBancaria():
         self.saldo += valor
 
     def saque(self, valor):
+        valor = float(input('Digite o valor do saque: '))
         if self.saldo < valor:
             print('Saldo insuficiente')
-            return
-        self.saldo -= valor
+        else:
+            self.saldo -= valor
+            print('Saque realizado com sucesso')
 
     def exibir_saldo(self):
         return f'{self.titular}, seu saldo é de: R$ {self.saldo:.2f}'
+
+
 

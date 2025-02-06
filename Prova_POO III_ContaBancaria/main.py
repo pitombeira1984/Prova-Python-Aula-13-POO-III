@@ -19,12 +19,7 @@ def main():
             conta.deposito(valor)
             print("Depósito realizado com sucesso!")
         elif opcao == 3:
-            valor = float(input("Digite o valor a ser sacado: "))
-            if valor > conta.saldo:
-                print("Saldo insuficiente!")
-                continue
-            conta.saque(valor)
-            print("Saque realizado com sucesso!")          
+            conta.saque(0)         
         elif opcao == 4:
             print("Saldo atual: ", conta.exibir_saldo())
         elif opcao == 5:
@@ -34,3 +29,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
